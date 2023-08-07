@@ -1,0 +1,22 @@
+@startuml Basic Sample
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+Person(user, "user")
+System_Boundary(c1, "Quake Analyzer System") {
+    Component(cli, "cli", "main", "Allows users generate the reports for quake games.")
+    Component(reader, "reader", "package", "Provides an interface for opening and reading a file.")
+    Component(parser, "parser", "package", "Provides an interface for parsing log lines to Quake Log struct.")
+    Component(match, "match", "package", "Holds domain object for Quake Matches.")
+    Component(report, "report", "package", "Provides an interface for represents the reports.")
+}
+
+
+Rel(user, cli, "Uses", "CLI")
+Rel(cli, reader, "Uses")
+Rel(cli, parser, "Uses")
+Rel(parser, match, "Uses")
+Rel(cli, report, "Uses")
+Rel(report, match, "Uses")
+
+
+@enduml
