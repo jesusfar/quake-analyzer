@@ -1,7 +1,11 @@
 # Quake log analyzer
 
 This is a simple implementation of Quake log analyzer, the project follow SOLID principles, 
-and is based on [Golang Standar Project Layout] (https://github.com/golang-standards/project-layout).
+and is based on [Golang Standar Project Layout](https://github.com/golang-standards/project-layout).
+
+## Architecture
+
+![C4 architecture](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://gist.githubusercontent.com/jesusfar/8ce4dea86c62a9a1fdba012517875eb3/raw/93abca895b019f31c7a9169bd2575e93879d45a6/gistfile1.txt)
 
 ## Requirements
 - Make
